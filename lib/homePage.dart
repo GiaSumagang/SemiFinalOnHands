@@ -68,6 +68,7 @@ class _MyhomepageState extends State<Myhomepage> {
               ),
               onDismissed: (direction) {
                 setState(() {
+                  todos.removeAt(index);
                   deleteData(todo);
                 });
               },
