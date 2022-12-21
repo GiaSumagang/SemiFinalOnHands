@@ -44,12 +44,6 @@ class _MyhomepageState extends State<Myhomepage> {
     }
   }
 
-  displayEditedData(var object) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        backgroundColor: Colors.deepPurple,
-        content: Text(
-            'Successfully edited Title: ${object["title"]} ID: ${object["id"]}')));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +51,7 @@ class _MyhomepageState extends State<Myhomepage> {
       appBar: AppBar(
           leading: const Icon(Icons.list_alt_rounded),
           title: const Text('Todo List')),
+
       body: ListView.builder(
           itemCount: todos.length,
           itemBuilder: (context, index) {
